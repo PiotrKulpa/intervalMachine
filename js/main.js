@@ -11,15 +11,34 @@ var intervalMachine = {
     shiftTime: function () {return this.elapsedTime() - parseInt(this.prepareTime(), 10); },
     startMachine: function () {
         var elapsedTimeShow = this.elapsedTime();
-        var prepareTimeShow = this.prepareTime();
+        var prepareTimeShow = parseInt(this.prepareTime(), 10);
+        var intensiveTimeShow = parseInt(this.intensiveTime(), 10);
+        var restTimeShow = parseInt(this.restTime(), 10);
         var i = 0;
+        var j = 0;
+        var k = 0;
         var endSound = document.getElementById('end-sound');
         var runCountdown = setInterval(function () { 
             i++;
-            if (i === prepareTimeShow) {
+            //Finish prepare time 
+            if (i == prepareTimeShow) {
                 endSound.play();
+            //Start Intensive time    
+            }else if(i > prepareTimeShow) {
+                j++;
+                if (j == intensiveTimeShow) {
+                    endSound.play();     
+                }else if (j > intensiveTimeShow) {
+                    k++;
+                    if (k == restTimeShow) {
+                         endSound.play();
+                    }else if (k > restTimeShow){
+                        j = 1;
+                        k = 0;
+                    }
+                }
             }
-            //console.log(this.prepareTime() );
+            //console.log(cooldownTimeShow);
             elapsedTimeShow--;
             document.getElementById('clock-ui').innerHTML = elapsedTimeShow;
             if (elapsedTimeShow === 0) {
