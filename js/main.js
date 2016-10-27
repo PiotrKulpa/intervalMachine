@@ -18,21 +18,21 @@ var intervalMachine = {
         var j = 0;
         var k = 0;
         var endSound = document.getElementById('end-sound');
-        var runCountdown = setInterval(function () { 
+        var runCountdown = setInterval(function () {
             i++;
             //Finish prepare time 
             if (i == prepareTimeShow) {
                 endSound.play();
             //Start Intensive time    
-            }else if(i > prepareTimeShow) {
+            } else if (i > prepareTimeShow) {
                 j++;
                 if (j == intensiveTimeShow) {
                     endSound.play();     
-                }else if (j > intensiveTimeShow) {
+                } else if (j > intensiveTimeShow) {
                     k++;
                     if (k == restTimeShow) {
-                         endSound.play();
-                    }else if (k > restTimeShow){
+                        endSound.play();
+                    } else if (k > restTimeShow) {
                         j = 1;
                         k = 0;
                     }
