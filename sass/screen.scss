@@ -7,22 +7,39 @@
 
 //Colors
 $main-blue: #47D2F9;
+$main-red: #8e0000;
 
 //Size
 $top-space: 15px;
+$font-basic: 1.25em;
+$font-medium: 2em;
+$font-big: 5em;
+$font-body-basic: 100%;
 
 @font-face {
-    font-family: myFirstFont;
-    src: url('file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/fonts/aspace_demo.otf');
+    font-family: fontBasic;
+    src: url('/fonts/aspace_demo.otf');
+}
+
+
+@font-face {
+    font-family: fontLight;
+    src: url('/fonts/aspace_light_demo.otf');
 }
 
 
 body{
-	font-family: myFirstFont;
-	background-image: url("file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/images/background-image.jpg");
+	font-family: fontLight;
+	background-image: url('/images/background-image.jpg');
 	background-repeat: repeat;
 	color: $main-blue;
+	font-size: $font-body-basic;
 	
+}
+h1{
+	color: $main-red;
+	font-size: $font-medium;
+	text-align: center;
 }
 #machine-container{
 	width: 50%;
@@ -33,15 +50,58 @@ body{
 	border-style: solid;
 	border-radius: 5px;
 	padding: 20px;
-	box-shadow: 0px 0px 15px #888888;
+	box-shadow: 0px 0px 55px $main-blue;
+	background-color: rgba(0, 0, 0, 0.8);
+	
 
 	
 }
+
+#clock-ui{
+	font-family: fontBasic !important;
+	font-size: $font-big !important;
+	height: 26px;
+	margin: auto;
+	width: 100px;
+	display: block;
+}
+#rounds-ui{
+	font-family: fontBasic !important;
+	font-size: $font-basic;
+	height: 16px;
+	margin: auto;
+	width: 100%;
+	display: block;
+	text-align: right;
+	float: left;
+	margin: 15px;
+	
+}
+#rounds-left, #rounds{
+	display: inline;
+	font-family: fontLight;
+}
+#msg{
+	color: $main-red;
+	font-size: $font-basic;
+}
 #desc{
 	margin-top: 15px;
+	font-size: $font-basic;
 }
 input{
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
+	height: 55px;
+	font-size: $font-basic;
+	font-family: fontBasic !important;
+	border:1px solid black;
+	border-radius: 10px;
+	text-align: center;
+}
+#buttons {
+	
+	text-align: center;
+	margin: 5px;
 }

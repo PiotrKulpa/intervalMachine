@@ -20,28 +20,37 @@
   </head>
 	<body>
 		<div class='container'>
-			<h1></h1>
+			
 			  <audio id="end-sound">
 				<source src="sounds/end.ogg" type="audio/ogg">
 				<source src="sounds/end.mp3" type="audio/mpeg">
 				Your browser does not support the audio element.
 			  </audio>
-			<div id="machine-container">
-			  <div id="clock-ui"></div><div id="rounds-left"></div><div id="rounds"></div>
-				<div id="desc">Rozgrzewka:</div>
-			  <input type="number" id="prepare-time" min="1"></br>
-		<div id="desc">Intensywnie:</div>
-			  <input type="number" id="intensive-time" min="1"></br>
+	<div id="machine-container">
+		<h1>Interwały</h1>
+		<div id="machine-container-inner">
+	<div id="clock-ui"></div>
+		<div id="rounds-ui">
+			<div id="rounds-left"></div><div id="rounds"></div>
+		</div>
+
+		<div id="desc">Rozgrzewka:</div>
+	  <input type="number" id="prepare-time" min="1"></br>
+<div id="desc">Intensywnie:</div>
+	  <input type="number" id="intensive-time" min="1"></br>
 <div id="desc">Spokojnie:</div>
-			  <input type="number" id="rest-time" min="1"></br>
+	  <input type="number" id="rest-time" min="1"></br>
 <div id="desc">Wyciszenie:</div>
-			  <input type="number" id="cooldown-time" min="1"></br>
+	  <input type="number" id="cooldown-time" min="1"></br>
 <div id="desc">Ilość powtórzeń:</div>
-			  <input type="number" id="repeat-number" min="1"></br>
-			  <button id="start-intervals">Start</button>
-				<button id="stop-intervals">Stop</button>
-				<div id="msg"></div>
-			</div>
+	  <input type="number" id="repeat-number" min="1"></br>
+<div id="buttons">
+	  <button id="start-intervals">Start</button>
+		<button id="stop-intervals">Stop</button>
+</div>
+		<div id="msg"></div>
+</div>
+	</div>
 
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

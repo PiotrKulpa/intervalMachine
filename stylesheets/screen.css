@@ -68,18 +68,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-face {
-  font-family: myFirstFont;
-  src: url("file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/fonts/aspace_demo.otf");
+  font-family: fontBasic;
+  src: url("/fonts/aspace_demo.otf");
 }
-/* line 20, ../sass/screen.scss */
+@font-face {
+  font-family: fontLight;
+  src: url("/fonts/aspace_light_demo.otf");
+}
+/* line 31, ../sass/screen.scss */
 body {
-  font-family: myFirstFont;
-  background-image: url("file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/images/background-image.jpg");
+  font-family: fontLight;
+  background-image: url("/images/background-image.jpg");
   background-repeat: repeat;
   color: #47D2F9;
+  font-size: 100%;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
+h1 {
+  color: #8e0000;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* line 44, ../sass/screen.scss */
 #machine-container {
   width: 50%;
   margin: auto;
@@ -89,17 +101,66 @@ body {
   border-style: solid;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0px 0px 15px #888888;
+  box-shadow: 0px 0px 55px #47D2F9;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
+#clock-ui {
+  font-family: fontBasic !important;
+  font-size: 5em !important;
+  height: 26px;
+  margin: auto;
+  width: 100px;
+  display: block;
+}
+
+/* line 68, ../sass/screen.scss */
+#rounds-ui {
+  font-family: fontBasic !important;
+  font-size: 1.25em;
+  height: 16px;
+  margin: auto;
+  width: 100%;
+  display: block;
+  text-align: right;
+  float: left;
+  margin: 15px;
+}
+
+/* line 80, ../sass/screen.scss */
+#rounds-left, #rounds {
+  display: inline;
+  font-family: fontLight;
+}
+
+/* line 84, ../sass/screen.scss */
+#msg {
+  color: #8e0000;
+  font-size: 1.25em;
+}
+
+/* line 88, ../sass/screen.scss */
 #desc {
   margin-top: 15px;
+  font-size: 1.25em;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 input {
   margin: 0px;
   padding: 0px;
   width: 100%;
+  height: 55px;
+  font-size: 1.25em;
+  font-family: fontBasic !important;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* line 103, ../sass/screen.scss */
+#buttons {
+  text-align: center;
+  margin: 5px;
 }
