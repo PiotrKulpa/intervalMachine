@@ -8,7 +8,8 @@
     <title>Interval Machine</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+	  <link href="stylesheets/screen.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,31 +18,37 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1>Hello, world!</h1>
-      <audio id="end-sound">
-        <source src="sounds/end.ogg" type="audio/ogg">
-        <source src="sounds/end.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <div id="clock-ui"></div>
-      Rozgrzewka:
-      <input type="number" id="prepare-time" min="1"></br>
-        Intensywnie:
-      <input type="number" id="intensive-time" min="1"></br>
-        Spokojnie:
-      <input type="number" id="rest-time" min="1"></br>
-        Wyciszenie:
-      <input type="number" id="cooldown-time" min="1"></br>
-        Ilość powtórzeń:
-      <input type="number" id="repeat-number" min="1"></br>
-      <button id="start-intervals">Start</button>
-          
+	<body>
+		<div class='container'>
+			<h1></h1>
+			  <audio id="end-sound">
+				<source src="sounds/end.ogg" type="audio/ogg">
+				<source src="sounds/end.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			  </audio>
+			<div id="machine-container">
+			  <div id="clock-ui"></div><div id="rounds-left"></div><div id="rounds"></div>
+				<div id="desc">Rozgrzewka:</div>
+			  <input type="number" id="prepare-time" min="1"></br>
+		<div id="desc">Intensywnie:</div>
+			  <input type="number" id="intensive-time" min="1"></br>
+<div id="desc">Spokojnie:</div>
+			  <input type="number" id="rest-time" min="1"></br>
+<div id="desc">Wyciszenie:</div>
+			  <input type="number" id="cooldown-time" min="1"></br>
+<div id="desc">Ilość powtórzeń:</div>
+			  <input type="number" id="repeat-number" min="1"></br>
+			  <button id="start-intervals">Start</button>
+				<button id="stop-intervals">Stop</button>
+				<div id="msg"></div>
+			</div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-      <script src="js/main.js"></script>
-  </body>
+
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<!--script src="js/bootstrap.min.js"></script-->
+			  <script src="js/main.js"></script>
+		</div>
+	</body>
 </html>

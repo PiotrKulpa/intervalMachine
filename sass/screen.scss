@@ -1,0 +1,47 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+//Colors
+$main-blue: #47D2F9;
+
+//Size
+$top-space: 15px;
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/fonts/aspace_demo.otf');
+}
+
+
+body{
+	font-family: myFirstFont;
+	background-image: url("file:///E:/Programowanie/JS/Interval%20Machine/intervalMachine/images/background-image.jpg");
+	background-repeat: repeat;
+	color: $main-blue;
+	
+}
+#machine-container{
+	width: 50%;
+	margin: auto;
+	margin-top: $top-space;
+	border-width: 1px;
+	border-color: $main-blue;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0px 0px 15px #888888;
+
+	
+}
+#desc{
+	margin-top: 15px;
+}
+input{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
