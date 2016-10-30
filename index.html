@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Interval Machine</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Interval Machine</title>
 
-    <!-- Bootstrap -->
-    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
-	  <link href="stylesheets/screen.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+		  <link href="stylesheets/screen.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
 	<body>
 		<div class='container'>
-			
-			  <audio id="end-sound">
+
+			<audio id="end-sound">
 				<source src="sounds/end.ogg" type="audio/ogg">
 				<source src="sounds/end.mp3" type="audio/mpeg">
 				Your browser does not support the audio element.
-			  </audio>
-	<div id="machine-container">
-		<h1>Interwały</h1>
-		<div id="machine-container-inner">
-			<div id="clock-ui"></div></br>
-		<div id="rounds-ui">
-			<div id="rounds-desc">Runda: </div><div id="rounds-left"></div><div id="rounds"></div>
-		</div>
-
-		<div id="desc">Rozgrzewka:</div>
-	  <input type="number" id="prepare-time" min="1"></br>
-<div id="desc">Intensywnie:</div>
-	  <input type="number" id="intensive-time" min="1"></br>
-<div id="desc">Spokojnie:</div>
-	  <input type="number" id="rest-time" min="1"></br>
-<div id="desc">Wyciszenie:</div>
-	  <input type="number" id="cooldown-time" min="1"></br>
-<div id="desc">Ilość powtórzeń:</div>
-	  <input type="number" id="repeat-number" min="1"></br>
-<div id="buttons">
-	  <button id="start-intervals" class="button">Start</button>
-		<button id="stop-intervals" class="button">Stop</button>
-</div>
-		<div id="msg"></div>
-</div>
-	</div>
+			</audio>
+			<div id="machine-container">
+				<h1>Interwały sekundowe</h1>
+				
+					<div id="clock-ui"></div></br>
+					<div id="rounds-ui">
+						<div id="rounds-desc">Runda: </div><div id="rounds-left"></div><div id="rounds"></div>
+					</div>
+					<img id="loader" class="loader" src="/images/loader.gif">
+					<div id="machine-container-inner">
+					<div id="desc">Rozgrzewka:</div>
+					<input type="number" id="prepare-time" min="1"></br>
+					<div id="desc">Intensywnie:</div>
+					<input type="number" id="intensive-time" min="1"></br>
+					<div id="desc">Spokojnie:</div>
+					<input type="number" id="rest-time" min="1"></br>
+					<div id="desc">Wyciszenie:</div>
+					<input type="number" id="cooldown-time" min="1"></br>
+					<div id="desc">Ilość powtórzeń:</div>
+					<input type="number" id="repeat-number" min="1"></br>
+					</div>
+					<div id="buttons">
+						<button id="start-intervals" class="button">Start</button>
+						<button id="stop-intervals" class="button">Stop</button>
+					</div>
+					<div id="msg"></div>
+				
+			</div>
 
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files as needed -->
 			<!--script src="js/bootstrap.min.js"></script-->
-			  <script src="js/main.js"></script>
+			<script src="js/main.js"></script>
 		</div>
 	</body>
 </html>

@@ -141,6 +141,14 @@ input:focus {
 	
 }
 
+img.loader {
+	text-align: center;
+	display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	display: none;
+}
+
 //For desktops & tablets
 @media only screen and (min-width: 450px) {
 

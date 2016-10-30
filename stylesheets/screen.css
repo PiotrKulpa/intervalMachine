@@ -201,8 +201,17 @@ input:focus {
   font-size: 1.25em;
 }
 
+/* line 144, ../sass/screen.scss */
+img.loader {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  display: none;
+}
+
 @media only screen and (min-width: 450px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 155, ../sass/screen.scss */
   body {
     font-family: fontLight;
     background-image: url("/images/background-image.jpg");
@@ -211,7 +220,7 @@ input:focus {
     font-size: 100%;
   }
 
-  /* line 155, ../sass/screen.scss */
+  /* line 163, ../sass/screen.scss */
   h1 {
     color: #8e0000;
     font-size: 2em;
@@ -219,7 +228,7 @@ input:focus {
     font-family: fontBasic;
   }
 
-  /* line 161, ../sass/screen.scss */
+  /* line 169, ../sass/screen.scss */
   #machine-container {
     width: 50%;
     margin: auto;
@@ -233,7 +242,7 @@ input:focus {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  /* line 177, ../sass/screen.scss */
+  /* line 185, ../sass/screen.scss */
   #clock-ui {
     font-family: fontBasic !important;
     font-size: 5em !important;
@@ -244,7 +253,7 @@ input:focus {
     text-align: center;
   }
 
-  /* line 186, ../sass/screen.scss */
+  /* line 194, ../sass/screen.scss */
   #rounds-ui {
     font-family: fontBasic !important;
     font-size: 1.25em;
@@ -254,30 +263,30 @@ input:focus {
     text-align: right;
   }
 
-  /* line 197, ../sass/screen.scss */
+  /* line 205, ../sass/screen.scss */
   #rounds-left, #rounds, #rounds-desc {
     display: inline;
     font-family: fontLight;
   }
 
-  /* line 202, ../sass/screen.scss */
+  /* line 210, ../sass/screen.scss */
   #rounds {
     padding: 5px;
   }
 
-  /* line 205, ../sass/screen.scss */
+  /* line 213, ../sass/screen.scss */
   #msg {
     color: #8e0000;
     font-size: 1.25em;
   }
 
-  /* line 209, ../sass/screen.scss */
+  /* line 217, ../sass/screen.scss */
   #desc {
     margin-top: 15px;
     font-size: 1.25em;
   }
 
-  /* line 213, ../sass/screen.scss */
+  /* line 221, ../sass/screen.scss */
   input {
     margin: 0px;
     padding: 0px;
@@ -290,19 +299,19 @@ input:focus {
     text-align: center;
   }
 
-  /* line 224, ../sass/screen.scss */
+  /* line 232, ../sass/screen.scss */
   input:focus {
     box-shadow: 0px 0px 25px #47D2F9;
     border-radius: 10px;
   }
 
-  /* line 228, ../sass/screen.scss */
+  /* line 236, ../sass/screen.scss */
   #buttons {
     text-align: center;
     margin: 5px;
   }
 
-  /* line 233, ../sass/screen.scss */
+  /* line 241, ../sass/screen.scss */
   .button {
     background-color: #47D2F9;
     color: #ffffff;
@@ -315,7 +324,7 @@ input:focus {
     box-shadow: 0px 0px 15px #ffffff;
   }
 
-  /* line 244, ../sass/screen.scss */
+  /* line 252, ../sass/screen.scss */
   .button:hover {
     background-color: #2e849c;
     color: #ffffff;

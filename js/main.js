@@ -16,6 +16,8 @@ var intervalMachine = {
         var restTimeShow = parseInt(this.restTime(), 10);
 		var cooldownTimeShow = parseInt(this.cooldownTime(), 10);
 		var repeatNumberShow = parseInt(this.repeatNumber(), 10);
+		document.getElementById('loader').style.display = 'block';
+		document.getElementById('machine-container-inner').style.display = 'none';
 		
 		//checking if inputs aren't empty
 		if (!prepareTimeShow || !intensiveTimeShow || !restTimeShow || !cooldownTimeShow || !repeatNumberShow) {
@@ -67,6 +69,8 @@ var intervalMachine = {
 					clearInterval(runCountdown);
 
 					endSound.play();
+					document.getElementById('loader').style.display = 'none';
+					document.getElementById('machine-container-inner').style.display = 'block';
 				}
 			}, 1000);
 		}
@@ -74,6 +78,8 @@ var intervalMachine = {
 		stopButton.onclick = function () {
 			clearInterval(runCountdown);
 			document.getElementById('rounds-left').innerHTML = 0;
+			document.getElementById('loader').style.display = 'none';
+			document.getElementById('machine-container-inner').style.display = 'block';
 		};
         
         
