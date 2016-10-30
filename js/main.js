@@ -28,26 +28,31 @@ var intervalMachine = {
 			var i = 0;//main counter
 			var j = 0;//intensive counter
 			var k = 0;//rest counter
+			var l = 0;//repeat counter
 			var endSound = document.getElementById('end-sound');
 
 			//Main countdown process
 			var runCountdown = setInterval(function () {
-				i++;
+				i += 1;
 				//Finish prepare time 
-				if (i == prepareTimeShow) {
+				if (i === prepareTimeShow) {
 					endSound.play();
 				//Start Intensive time    
 				} else if (i > prepareTimeShow) {
-					j++;
-					if (j == intensiveTimeShow) {
+					j += 1;
+					if (j === intensiveTimeShow && l < repeatNumberShow) {
 						endSound.play();
 						//start rest time
 					} else if (j > intensiveTimeShow) {
-						k++;
-						if (k == restTimeShow) {
+						k += 1;
+						if (k === restTimeShow && l < repeatNumberShow) {
 							endSound.play();
-							rounds++;
+							rounds += 1;
+							l += 1;
 							document.getElementById('rounds-left').innerHTML = rounds;
+							if (l > repeatNumberShow) {
+								document.getElementById('rounds-left').innerHTML = repeatNumberShow;
+							}
 							//reset timers & begins intensive & rest loop
 						} else if (k > restTimeShow) {
 							j = 1;
@@ -56,7 +61,7 @@ var intervalMachine = {
 					}
 				}
 				//console.log(cooldownTimeShow);
-				elapsedTimeShow--;
+				elapsedTimeShow -= 1;
 				document.getElementById('clock-ui').innerHTML = elapsedTimeShow;
 				if (elapsedTimeShow === 0) {
 					clearInterval(runCountdown);
@@ -64,7 +69,7 @@ var intervalMachine = {
 					endSound.play();
 				}
 			}, 1000);
-		};
+		}
 		var stopButton = document.getElementById('stop-intervals');
 		stopButton.onclick = function () {
 			clearInterval(runCountdown);
