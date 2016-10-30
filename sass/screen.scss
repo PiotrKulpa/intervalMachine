@@ -7,7 +7,10 @@
 
 //Colors
 $main-blue: #47D2F9;
+$main-blue-hover: #2e849c;
 $main-red: #8e0000;
+$buttons: #ffffff;
+$shadow-bright: #ffffff;
 
 //Size
 $top-space: 15px;
@@ -26,23 +29,25 @@ $font-body-basic: 100%;
     font-family: fontLight;
     src: url('/fonts/aspace_light_demo.otf');
 }
-
-
+//For mobile first
 body{
 	font-family: fontLight;
 	background-image: url('/images/background-image.jpg');
 	background-repeat: repeat;
 	color: $main-blue;
 	font-size: $font-body-basic;
+	//margin: 5px;
+	width: 100%;
 	
 }
 h1{
 	color: $main-red;
 	font-size: $font-medium;
 	text-align: center;
+	font-family: fontBasic;
 }
 #machine-container{
-	width: 50%;
+	width: 80%;
 	margin: auto;
 	margin-top: $top-space;
 	border-width: 1px;
@@ -51,7 +56,7 @@ h1{
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: 0px 0px 55px $main-blue;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.5);
 	
 
 	
@@ -60,26 +65,30 @@ h1{
 #clock-ui{
 	font-family: fontBasic !important;
 	font-size: $font-big !important;
-	height: 26px;
+	height: 80px;
 	margin: auto;
-	width: 100px;
+	width: 70%;
 	display: block;
+	text-align: center;
 }
 #rounds-ui{
 	font-family: fontBasic !important;
 	font-size: $font-basic;
 	height: 16px;
-	margin: auto;
 	width: 100%;
 	display: block;
 	text-align: right;
-	float: left;
-	margin: 15px;
+	//float: left;
+	
 	
 }
-#rounds-left, #rounds{
+#rounds-left, #rounds, #rounds-desc{
 	display: inline;
 	font-family: fontLight;
+	
+}
+#rounds{
+	padding: 5px;
 }
 #msg{
 	color: $main-red;
@@ -92,7 +101,7 @@ h1{
 input{
 	margin: 0px;
 	padding: 0px;
-	width: 100%;
+	width: 90%;
 	height: 55px;
 	font-size: $font-basic;
 	font-family: fontBasic !important;
@@ -100,8 +109,147 @@ input{
 	border-radius: 10px;
 	text-align: center;
 }
+input:focus { 
+    box-shadow: 0px 0px 25px $main-blue;
+	border-radius: 10px;
+}
 #buttons {
 	
 	text-align: center;
 	margin: 5px;
+}
+.button{
+	background-color: $main-blue;
+    color: $buttons;
+    border: 0px;
+	border-radius: 10px;
+	width: 100px;
+	height: 50px;
+	font-family: fontBasic;
+	font-size: $font-basic;
+	box-shadow: 0px 0px 15px $shadow-bright;
+}
+.button:hover{
+	background-color: $main-blue-hover;
+    color: $buttons;
+    border: 0px;
+	border-radius: 10px;
+	width: 100px;
+	height: 50px;
+	font-family: fontBasic;
+	font-size: $font-basic;
+	
+}
+
+//For desktops & tablets
+@media only screen and (min-width: 450px) {
+
+	body{
+		font-family: fontLight;
+		background-image: url('/images/background-image.jpg');
+		background-repeat: repeat;
+		color: $main-blue;
+		font-size: $font-body-basic;
+
+	}
+	h1{
+		color: $main-red;
+		font-size: $font-medium;
+		text-align: center;
+		font-family: fontBasic;
+	}
+	#machine-container{
+		width: 50%;
+		margin: auto;
+		margin-top: $top-space;
+		border-width: 1px;
+		border-color: $main-blue;
+		border-style: solid;
+		border-radius: 5px;
+		padding: 20px;
+		box-shadow: 0px 0px 55px $main-blue;
+		background-color: rgba(0, 0, 0, 0.5);
+
+
+
+	}
+
+	#clock-ui{
+		font-family: fontBasic !important;
+		font-size: $font-big !important;
+		height: 80px;
+		margin: auto;
+		width: 70%;
+		display: block;
+		text-align: center;
+	}
+	#rounds-ui{
+		font-family: fontBasic !important;
+		font-size: $font-basic;
+		height: 16px;
+		width: 100%;
+		display: block;
+		text-align: right;
+		//float: left;
+
+
+	}
+	#rounds-left, #rounds, #rounds-desc{
+		display: inline;
+		font-family: fontLight;
+
+	}
+	#rounds{
+		padding: 5px;
+	}
+	#msg{
+		color: $main-red;
+		font-size: $font-basic;
+	}
+	#desc{
+		margin-top: 15px;
+		font-size: $font-basic;
+	}
+	input{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 55px;
+		font-size: $font-basic;
+		font-family: fontBasic !important;
+		border:1px solid black;
+		border-radius: 10px;
+		text-align: center;
+	}
+	input:focus { 
+		box-shadow: 0px 0px 25px $main-blue;
+		border-radius: 10px;
+	}
+	#buttons {
+
+		text-align: center;
+		margin: 5px;
+	}
+	.button{
+		background-color: $main-blue;
+		color: $buttons;
+		border: 0px;
+		border-radius: 10px;
+		width: 100px;
+		height: 50px;
+		font-family: fontBasic;
+		font-size: $font-basic;
+		box-shadow: 0px 0px 15px $shadow-bright;
+	}
+	.button:hover{
+		background-color: $main-blue-hover;
+		color: $buttons;
+		border: 0px;
+		border-radius: 10px;
+		width: 100px;
+		height: 50px;
+		font-family: fontBasic;
+		font-size: $font-basic;
+
+	}
 }
