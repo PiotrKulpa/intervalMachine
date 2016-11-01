@@ -18,7 +18,7 @@ var intervalMachine = {
 		var repeatNumberShow = parseInt(this.repeatNumber(), 10);
 		document.getElementById('loader').style.display = 'block';
 		document.getElementById('machine-container-inner').style.display = 'none';
-		
+		var grtest = 'test';
 		//checking if inputs aren't empty
 		if (!prepareTimeShow || !intensiveTimeShow || !restTimeShow || !cooldownTimeShow || !repeatNumberShow) {
 			document.getElementById('msg').innerHTML = 'Pola nie mogą być puste';
@@ -32,6 +32,7 @@ var intervalMachine = {
 			var k = 0;//rest counter
 			var l = 0;//repeat counter
 			var endSound = document.getElementById('end-sound');
+			
 
 			//Main countdown process
 			var runCountdown = setInterval(function () {
